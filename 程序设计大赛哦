@@ -1,0 +1,33 @@
+Description
+天炸dalao最近在玩一个游戏，游戏有一个彩蛋，只要触发了机关，就会弹出一行数字，你需要分别求出这长串序列中奇数和偶数的和，并在机关上输入，如果答案正确，你会得到全图的最终武器，请你设计一个程序，让天炸dalao能拿到最终武器打败Boss。
+
+Input
+第一行输入一个整数t( 0 < t <= 105 )，代表测试用例组数
+
+接下来t行每行有n+1( 0 < n <= 105)个数字，每行第一个整数为n，代表后续有n个整数。
+
+Output
+输出有t行，每行两个整数，分别为奇数的和与偶数的和，两个数字用空格隔开。
+
+Sample Input
+
+2
+5 1 2 4 5 6
+4 3 2 5 1
+Sample Output
+6 12
+9 2
+
+答案！！！！！
+n = int(input())
+while n :
+    odd = even = 0
+    l = [int(x) for x in input().split()]
+    for i in range(1,len(l)):
+        if l[i] % 2:
+            odd += l[i]
+        else:
+            even += l[i]
+
+    print(odd, even)
+    n -= 1
